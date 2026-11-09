@@ -49,5 +49,6 @@ Some initial ideas for what I want to improve:
 2. **Architectural speed-ups.** For example, only simulate gates whose inputs have changed (event-driven simulation), and do preprocessing such as flattening the component hierarchy into one flat list of gates before running, so the simulation loop itself is as cheap as possible.
 3. **Storing data between runs.** The previous version used JSON files. I want to look at the options here, including how to store layout as well as logic so circuits can be reopened and edited.
 4. **A much better-looking GUI, built with AI help.** Let AI do most of the work on the frontend so it looks far better, while I focus on the more interesting part: the backend simulation.
+5. **A hand-written Makefile instead of CMake.** I want experience with Make itself. The project only targets Linux, so CMake's cross-platform support isn't needed, and libraries such as SFML can be found with `pkg-config` on both Arch and Ubuntu.
 
 The long-term goal is to add buses (possibly with tri-state logic), then registers, memory and a control unit, and eventually simulate a simple instruction set.
